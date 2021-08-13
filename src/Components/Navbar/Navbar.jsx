@@ -21,7 +21,9 @@ const useStyles = makeStyles((theme) => ({
   mobileView: {
     display: "flex",
     flexDirection: "column",
-    padding: "0.4rem"
+    padding: "0.4rem",
+    justifyContent : "center",
+    alignItems: "center"
   },
   icon: {
     color: "#fff",

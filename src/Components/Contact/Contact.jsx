@@ -74,6 +74,7 @@ export default function Contact() {
   }
   return (
       <form className={classes.root} id="contact" onSubmit={sendEmail}>
+        <h2 style={{textAlign: "center", margin: "auto"}}>Contact Me</h2>
         <TextField
           id="filled-basic"
           name="name"
