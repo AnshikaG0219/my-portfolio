@@ -49,8 +49,11 @@ const useStyles = makeStyles((theme) => ({
   },
   hamMenu:{
     color: "#fff",
+    display: "flex",
+    padding: "0.8rem",
+    justifyContent: "center",
+    alignItems: "center",
     textAlign: "center",
-    justifyContent: "end",
     [theme.breakpoints.up('sm')] : {
       display: "none"
     }
