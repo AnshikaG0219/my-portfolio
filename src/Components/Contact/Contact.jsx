@@ -2,7 +2,7 @@ import { makeStyles, TextField, Button } from "@material-ui/core";
 import React from "react";
 import "./style.css";
 import emailjs from "emailjs-com";
-import { ThemeProvider, createTheme   } from "@material-ui/core/styles";
+import { createTheme   } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: "2% auto",
@@ -74,7 +74,7 @@ export default function Contact() {
   }
   return (
       <form className={classes.root} id="contact" onSubmit={sendEmail}>
-        <h2 style={{textAlign: "center", margin: "auto"}}>Contact Me</h2>
+        <h2 style={{textAlign: "center", margin: "auto", padding: "2rem 0"}}>Contact Me</h2>
         <TextField
           id="filled-basic"
           name="name"

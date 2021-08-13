@@ -10,7 +10,6 @@ import { NavLink } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link as Scroll } from "react-scroll";
 import items from "./ItemList";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
@@ -22,16 +21,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: "0.4rem",
-    justifyContent : "center",
-    alignItems: "center"
   },
   icon: {
     color: "#fff",
     "&:hover": {
       color: "#F4ABC4",
     },
-    
     [theme.breakpoints.down('sm')] : {
+      height: "0",
       display: "none"
     }
   },
@@ -39,9 +36,6 @@ const useStyles = makeStyles((theme) => ({
     margin: "1rem",
     flexGrow: "1",
     
-    [theme.breakpoints.down('sm')] : {
-      display: "none"
-    }
   },
   links: {
     margin: "2rem 1.5rem",
@@ -53,35 +47,33 @@ const useStyles = makeStyles((theme) => ({
       color: "#F4ABC4",
     },
   },
-  // Mlinks: {
-  //   margin: "0.5rem" ,
-  //   textDecoration: "none",
-  //   color: "#fff",
-  //   display: "flex",
-  //   '&: hover' : {
-  //     color: "#F4ABC4"
-  //   }
-  // },
   hamMenu:{
     color: "#fff",
     textAlign: "center",
+    justifyContent: "end",
     [theme.breakpoints.up('sm')] : {
       display: "none"
     }
   },
+  toolbar: {
+    [theme.breakpoints.down('sm')] : {
+      height: "0",
+      display: "none"
+    }
+
+  }
 }));
 
 export default function Navbar() {
   const theme = useTheme();
   const classes = useStyles();
-  const size = useMediaQuery(theme.breakpoints.down('sm'));
   const [show, setShow] = useState(false);
 
   return (
     <>
       <AppBar position="fixed" className={classes.appbar} elevation={0}>
       <Button className={classes.hamMenu} onClick={() => setShow(!show)}><MenuIcon/></Button>
-        <Toolbar className={classes.toolbar}>
+        <Toolbar className={show? classes.mobileView : classes.toolbar}>
           <CssBaseline />
           <Nav className={show? classes.mobileView : classes.nav}>
             {items.map((items) => (

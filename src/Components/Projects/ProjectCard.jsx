@@ -23,6 +23,14 @@ const useStyles = makeStyles({
   media: {
     height: 200,
   },
+  action: {
+    '&:hover': {
+      color:"#F4ABC4"
+    },
+    '&:active' : {
+      color:"#F4ABC4"
+    }
+  },
   link:{
     color: "#fff",
     padding: "1rem",
@@ -37,7 +45,7 @@ export default function MediaCard({ projects }) {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea href={projects.url} className={classes.action}>
         <Image
           className={classes.media}
           alt={projects.title}
