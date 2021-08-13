@@ -24,6 +24,11 @@ const techstack = [
         title: "Flask",
         src: "https://img.icons8.com/nolan/64/flask.png"
     },
+    {
+        id: 6,
+        title: "Node.js",
+        src: "https://img.icons8.com/color/48/000000/nodejs.png"
+    }
 ]
 
 export default techstack;

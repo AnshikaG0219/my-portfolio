@@ -5,10 +5,14 @@ import projects from "./Projectslist";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: "100vh",
-    flexGrow: 1,
-    borderRadius: "0",
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
     fontFamily: "Comfortaa",
+    alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+    },
   },
 }));
 
@@ -28,20 +32,11 @@ export default function Projects() {
       >
         MY PROJECTS
       </h1>
-      <Grid container className={classes.root}>
+      <div className={classes.root}>
         {projects.map((projects) => (
-          <Grid
-            item
-            key={projects.id}
-            md={4}
-            xs={12}
-            justifyContent="center"
-            spacing={2}
-          >
             <ProjectCard projects={projects} />
-          </Grid>
         ))}
-      </Grid>
+        </div>
     </>
   );
 }

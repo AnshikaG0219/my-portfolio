@@ -55,7 +55,7 @@ export default function Main() {
         <br />
       </h1>
       
-        <Scroll to="projects" smooth={true}>
+        <Scroll to="projects">
           <IconButton className={classes.scrollButton}>
           <h4 className={classes.scrollHead}>My Projects</h4><br/><ExpandMoreIcon className={classes.Down} />
           </IconButton>

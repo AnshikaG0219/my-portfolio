@@ -2,7 +2,6 @@ import React from "react";
 import { Image } from "react-bootstrap";
 import profile from "../asset/profile.jpg";
 import { makeStyles, Grid } from "@material-ui/core";
-import { Row } from "react-bootstrap";
 import techstack from "./TechStack";
 import Tech from './Tech'
 
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
   },
   stack: {
-    height: "20vh"
+    height: "50vh"
   },
   header: {
     margin: "3% 7%",
@@ -29,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 export default function About() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="about">
       <h1 className={classes.header}>ABOUT</h1>
       <Image
         src={profile}
@@ -41,7 +40,7 @@ export default function About() {
       <div style={{ width: "50%", margin: "3rem auto" }}>
         I'm a Full Stack Wev Developer based out of Delhi, India. Apart from
         that I am also engineering student at IGDTUW. I love building responsive
-        dynamic websites. I am also an artist and you can check my work on
+        dynamic websites. I am also an artist and you can check my work
         through Instagram.
       </div>
       <h1 className={classes.header}>TECHSTACK</h1>

@@ -4,17 +4,15 @@ import {
   Card,
   CardActionArea,
   CardContent,
-  CardMedia,
   IconButton,
   Typography,
 } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { Image } from "react-bootstrap";
-import img from "../asset/bg.jpg";
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 300,
+    maxWidth: "90%",
     color: "#fff",
     fontFamily: "Comfortaa",
     background: "rgb(6, 9, 48)",
