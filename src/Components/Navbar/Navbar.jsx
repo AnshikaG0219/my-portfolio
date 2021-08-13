@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: "0.4rem",
+    textAlign: "center"
   },
   icon: {
     color: "#fff",
