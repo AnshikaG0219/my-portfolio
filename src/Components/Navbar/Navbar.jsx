@@ -1,4 +1,4 @@
-import { AppBar, CssBaseline, Button, Toolbar, useTheme } from "@material-ui/core";
+import { AppBar, CssBaseline, Button, Toolbar } from "@material-ui/core";
 import React, {useState} from "react";
 import { makeStyles } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -69,7 +69,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Navbar() {
-  const theme = useTheme();
   const classes = useStyles();
   const [show, setShow] = useState(false);
 

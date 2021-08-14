@@ -3,7 +3,7 @@ import { Image } from "react-bootstrap";
 import profile from "../asset/profile.jpg";
 import { makeStyles, Grid } from "@material-ui/core";
 import techstack from "./TechStack";
-import Tech from './Tech'
+import Tech from "./Tech";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,13 +15,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
   },
   stack: {
-    height: "50vh"
+    height: "50vh",
   },
   header: {
     margin: "3% 7%",
   },
-  item:{
-    textAlign: "center"
+  item: {
+    textAlign: "center",
   },
 }));
 
@@ -38,10 +38,9 @@ export default function About() {
         title="Anshika Gautam (Yes that's me)"
       />
       <div style={{ width: "50%", margin: "3rem auto" }}>
-        I'm a Full Stack Wev Developer based out of Delhi, India. Apart from
-        that I am also engineering student at IGDTUW. I love building responsive
-        dynamic websites. I am also an artist and you can check my work
-        through Instagram.
+        Hello there! I'm Anshika, a sophomore at Indira Gandhi Delhi Technical
+        University for Women, Delhi. I am a Developer, a mentor and a learner. I
+        love building Responsive and Dynamic Web Apps.
       </div>
       <h1 className={classes.header}>TECHSTACK</h1>
       <Grid container className={classes.stack}>
@@ -54,7 +53,7 @@ export default function About() {
             justifyContent="center"
             className={classes.item}
           >
-            <Tech techstack={techstack}/>
+            <Tech techstack={techstack} />
           </Grid>
         ))}
       </Grid>

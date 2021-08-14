@@ -2,7 +2,8 @@ import { makeStyles, TextField, Button } from "@material-ui/core";
 import React from "react";
 import "./style.css";
 import emailjs from "emailjs-com";
-import { createTheme   } from "@material-ui/core/styles";
+import { createTheme, ThemeProvider   } from "@material-ui/core/styles";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: "2% auto",
@@ -45,23 +46,21 @@ const useStyles = makeStyles((theme) => ({
 
 const theme = createTheme({
     palette: {
-        type : "dark "
+        type : "dark"
+    },
+    typography: {
+      fontFamily: "Comfortaa"
     }
 })
 
 
 export default function Contact() {
   const classes = useStyles();
+
   function sendEmail(e) {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_t3wamfg",
-        "template_gvg5htr",
-        e.target,
-        "user_1JI3vTYRgFNTyieRk8Fgr"
-      )
+    emailjs.sendForm( "service_t3wamfg", "template_gvg5htr", e.target, "user_1JI3vTYRgFNTyieRk8Fgr")
       .then(
         (result) => {
           console.log(result.text);
@@ -73,6 +72,7 @@ export default function Contact() {
     e.target.reset();
   }
   return (
+    <ThemeProvider theme={theme}>
       <form className={classes.root} id="contact" onSubmit={sendEmail}>
         <h2 style={{textAlign: "center", margin: "auto", padding: "2rem 0"}}>Contact Me</h2>
         <TextField
@@ -103,5 +103,6 @@ export default function Contact() {
           Submit
         </Button>
       </form>
+      </ThemeProvider>
   );
 }
