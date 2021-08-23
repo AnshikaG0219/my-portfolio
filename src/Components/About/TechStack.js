@@ -38,6 +38,11 @@ const techstack = [
         id: 8,
         title: "Node.js",
         src: "https://img.icons8.com/color/48/000000/nodejs.png"
+    },
+    {
+        id: 9,
+        title: "jQuery",
+        src: "https://img.icons8.com/ios-filled/50/4a90e2/jquery.png"
     }
 ]
 

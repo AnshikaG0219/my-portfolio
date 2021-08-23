@@ -12,18 +12,20 @@ import { Image } from "react-bootstrap";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: "90%",
     color: "#fff",
     fontFamily: "Comfortaa",
     background: "rgb(6, 9, 48)",
     textAlign: "center",
     marginBottom: "2rem",
     borderRadius: "0",
+    maxWidth: '90%'
   },
   media: {
-    height: 200,
+    height: "auto",
+    width: '100%'
   },
   action: {
+    width: "100%",
     '&:hover': {
       color:"#F4ABC4"
     },

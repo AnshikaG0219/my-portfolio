@@ -1,19 +1,19 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core";
+import { Grid, makeStyles } from "@material-ui/core";
 import ProjectCard from "./ProjectCard";
 import projects from "./Projectslist";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '100vh',
-    display: 'flex',
-    justifyContent: 'center',
     fontFamily: "Comfortaa",
-    alignItems: 'center',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
-    },
+    maxWidth: '100%',
   },
+  layout:{
+    flexGrow:1,
+    padding: theme.spacing(2),
+  }
+
 }));
 
 export default function Projects() {
@@ -33,9 +33,13 @@ export default function Projects() {
         MY PROJECTS
       </h1>
       <div className={classes.root}>
+        <Grid container justify="center" className={classes.layout}>
         {projects.map((projects) => (
+          <Grid projects key={projects.id} md={4} sm={12} spacing={2}>
             <ProjectCard projects={projects} />
+          </Grid>
         ))}
+        </Grid>
         </div>
     </>
   );
