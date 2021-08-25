@@ -76,6 +76,7 @@ export default function Contact() {
       <form className={classes.root} id="contact" onSubmit={sendEmail}>
         <h2 style={{textAlign: "center", margin: "auto", padding: "2rem 0"}}>Contact Me</h2>
         <TextField
+        required
           id="filled-basic"
           name="name"
           label="Name"
@@ -84,6 +85,7 @@ export default function Contact() {
           InputLabelProps={{ className: "textfield__label" }}
         />
         <TextField
+        required
           id="filled-basic"
           name="email"
           label="Email"
@@ -91,6 +93,7 @@ export default function Contact() {
           InputLabelProps={{ className: "textfield__label" }}
         />
         <TextField
+        required
           id="filled-multiline-static"
           name="message"
           label="Message"
